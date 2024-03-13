@@ -23,25 +23,58 @@ class MyHomePage extends StatelessWidget {
     {
       'text': '『ちいかわらんど TOKYO Station』リニューアルオープン記念🎉',
       'imageUrls': [
-        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/main_02.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/ck_240327_02gn.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/ck_240327_03gn.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/ck_240327_04gn.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/ck_240327_05gn.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/ck_240327_06gn.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/ck_240327_07gn.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/ck_240327_08gn.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/ck_240327_09gn.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/ck_240327_10gn.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/ck_240327_11gn.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/ck_240327_13gn.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/ck_240327_12gn.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/ck_240327_14gn.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/ck_240327_15gn.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/ck_240327_16gn.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/ck_240327_17gn.jpg',
       ],
     },
     {
       'text': '『ハチさんマスコット(ちいかわ/ハチワレ/うさぎ)』',
       'imageUrls': [
-        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/main_02.jpg',
-        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/main_02.jpg',
-        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/main_02.jpg',
-        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/main_02.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/fukuoka/img/ck_240327_02pr.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/fukuoka/img/ck_240327_04pr.jpg',
       ],
     },
     {
       'text': '『まじかるちいかわストア』',
       'imageUrls': [
-        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/main_02.jpg',
+        'https://chiikawa-info.jp/magical_store/shinjuku/img/ck_240314_02ev.jpg',
+        'https://chiikawa-info.jp/magical_store/shinjuku/img/ck_240314_03ev.jpg',
+        'https://chiikawa-info.jp/magical_store/shinjuku/img/ck_240314_04ev.jpg',
+        'https://chiikawa-info.jp/magical_store/shinjuku/img/ck_240314_05ev.jpg',
+        'https://chiikawa-info.jp/magical_store/shinjuku/img/ck_240314_20ev.jpg',
+        'https://chiikawa-info.jp/magical_store/shinjuku/img/ck_240314_06ev.jpg',
+        'https://chiikawa-info.jp/magical_store/shinjuku/img/ck_240314_07ev.jpg',
+        'https://chiikawa-info.jp/magical_store/shinjuku/img/ck_240314_16ev.jpg',
+        'https://chiikawa-info.jp/magical_store/shinjuku/img/ck_240314_08ev.jpg',
+        'https://chiikawa-info.jp/magical_store/shinjuku/img/ck_240314_09ev.jpg',
+        'https://chiikawa-info.jp/magical_store/shinjuku/img/ck_240314_11ev.jpg',
+        'https://chiikawa-info.jp/magical_store/shinjuku/img/ck_240314_12ev.jpg',
+        'https://chiikawa-info.jp/magical_store/shinjuku/img/ck_240314_15ev.jpg',
+        'https://chiikawa-info.jp/magical_store/shinjuku/img/ck_240314_17ev.jpg',
+        'https://chiikawa-info.jp/magical_store/shinjuku/img/ck_240314_18ev.jpg',
+        'https://chiikawa-info.jp/magical_store/shinjuku/img/ck_240314_19ev.jpg'
       ],
     },
-    // 添加更多的資料，每個資料項目都包含文字資訊和圖片URL列表
+    {
+      'text': '『ちいかわ 飛び立つモモンガマスコット』',
+      'imageUrls': [
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/ck_240301_02pr.jpg',
+      ],
+    },
   ];
   @override
   Widget build(BuildContext context) {
