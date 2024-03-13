@@ -19,11 +19,29 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  final List<String> infos = [
-    '『ちいかわらんど TOKYO Station』リニューアルオープン記念🎉',
-    '『ハチさんマスコット(ちいかわ/ハチワレ/うさぎ)』',
-    '『まじかるちいかわストア』',
-    // 可以添加更多的资料
+  final List<Map<String, dynamic>> infos = [
+    {
+      'text': '『ちいかわらんど TOKYO Station』リニューアルオープン記念🎉',
+      'imageUrls': [
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/main_02.jpg',
+      ],
+    },
+    {
+      'text': '『ハチさんマスコット(ちいかわ/ハチワレ/うさぎ)』',
+      'imageUrls': [
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/main_02.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/main_02.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/main_02.jpg',
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/main_02.jpg',
+      ],
+    },
+    {
+      'text': '『まじかるちいかわストア』',
+      'imageUrls': [
+        'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/main_02.jpg',
+      ],
+    },
+    // 添加更多的資料，每個資料項目都包含文字資訊和圖片URL列表
   ];
   @override
   Widget build(BuildContext context) {
@@ -44,9 +62,13 @@ class MyHomePage extends StatelessWidget {
                 shrinkWrap: true,
                 itemCount: infos.length,
                 itemBuilder: (context, index) {
+                  Map<String, dynamic> info = infos[index];
                   return Column(
                     children: [
-                      Info(data: infos[index]),
+                      Info(
+                        data: info['text'],
+                        imageUrls: info['imageUrls'],
+                      ),
                       SizedBox(height: 10),
                     ],
                   );
@@ -62,14 +84,37 @@ class MyHomePage extends StatelessWidget {
 
 class Info extends StatelessWidget {
   final String data;
+  final List<String> imageUrls;
 
   const Info({
     Key? key,
     required this.data,
+    required this.imageUrls,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> imageWidgets = [];
+
+    // 將圖片和間距一起添加到列表中
+    for (int i = 0; i < imageUrls.length; i++) {
+      imageWidgets.add(
+        SizedBox(
+          width: 10, // 調整間距的大小
+        ),
+      );
+      imageWidgets.add(
+        SizedBox(
+          width: 78,
+          height: 109,
+          child: Image.network(
+            imageUrls[i],
+            fit: BoxFit.cover,
+          ),
+        ),
+      );
+    }
+
     return Container(
       color: Colors.white,
       width: 360,
@@ -77,49 +122,15 @@ class Info extends StatelessWidget {
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.start, // 調整圖片的對齊方式
           children: [
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start, // 調整文字的對齊方式
               children: [
                 Text(data),
                 SizedBox(height: 10),
                 Row(
-                  children: [
-                    Image.network(
-                      'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/main_02.jpg',
-                      width: 78,
-                      height: 109,
-                      fit: BoxFit.cover,
-                    ),
-                    SizedBox(width: 10),
-                    Image.network(
-                      'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/main_02.jpg',
-                      width: 78,
-                      height: 109,
-                      fit: BoxFit.cover,
-                    ),
-                    SizedBox(width: 10),
-                    Image.network(
-                      'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/main_02.jpg',
-                      width: 78,
-                      height: 109,
-                      fit: BoxFit.cover,
-                    ),
-                    SizedBox(width: 10),
-                    Image.network(
-                      'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/main_02.jpg',
-                      width: 78,
-                      height: 109,
-                      fit: BoxFit.cover,
-                    ),
-                    SizedBox(width: 10),
-                    Image.network(
-                      'https://www.chiikawa-info.jp/chiikawaland/tokyo/img/main_02.jpg',
-                      width: 78,
-                      height: 109,
-                      fit: BoxFit.cover,
-                    ),
-                  ],
+                  children: imageWidgets,
                 ),
               ],
             ),
