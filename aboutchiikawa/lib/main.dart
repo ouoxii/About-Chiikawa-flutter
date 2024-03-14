@@ -160,7 +160,12 @@ class Info extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start, // 調整文字的對齊方式
               children: [
-                Text(data),
+                Row(children: [
+                  Icon(
+                    Icons.arrow_right,
+                  ),
+                  Text(data)
+                ]),
                 SizedBox(height: 10),
                 Row(
                   children: imageWidgets,
