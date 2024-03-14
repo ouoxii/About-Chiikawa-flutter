@@ -1,7 +1,10 @@
 # aboutchiikawa
-:bulb: [Github](https://github.com/ouoxii/About-Chiikawa-flutter)
 ![image](aboutChiikawa.gif)
 
+:bulb: [Github](https://github.com/ouoxii/About-Chiikawa-flutter)
+> 《吉伊卡哇》是由日本漫畫家ナガノ創作的漫畫系列
+> 去年因動畫撥出而廣受各年齡層喜愛 (巴哈動畫瘋有上架)
+> 因為非常喜愛因此寫了一個介紹各種周邊的介面。
 
 ## 1. 一定要使用的widget
 
